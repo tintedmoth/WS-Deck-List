@@ -1,1 +1,91 @@
-
+﻿Da Capo / Dal Segno	DC, DC3, DS
+Little Busters!	LB, KW
+Familiar of Zero	ZM
+Magical Girl Lyrical Nanoha	NS, N1, NV, NA, N2, NR
+Lucky Star	LS
+CLANNAD	CL
+The Girl Who Leapt Through Space / My-Hime & My-Otome	SK, MH
+Phantom -Requiem for the Phantom-	PT
+The Melancholy of Haruhi Suzumiya	SY,Ssy
+A Certain Magical Index / A Certain Scientific Railgun	ID, RG
+Angel Beats! / Kud Wafter	AB, KW
+Shakugan no Shana	SS
+Rewrite	RW
+Robotics;Notes	RN
+Nichijou	NJ
+Dog Days	DD
+Madoka Magica	MM, MR
+Symphogear	SG
+Visual Arts	VA
+Vividred Operation	VR
+Love Live!	LL
+Day Break Illusion	GT
+Nisekoi	NK
+Girl Friend Beta	GF
+To Love-Ru	TL
+Charlotte	CHA
+Idolmaster Cinderella Girls	IMC
+Is the Order a Rabbit??	GU
+Love Live! Sunshine!	LSS
+Card Game Shiyoko	CGS
+Bang Dream!	BD
+Kono Suba	KS,Sks
+ViVid Strike!	VS
+Kemono Friends	KMN
+Hina Logi ~from Luck & Logic~	HLL
+Saekano: How to Raise a Boring Girlfriend	SHS
+Summer Pockets	SMP
+Yuuna and the Haunted Hot Springs	YYS
+Kadokawa Sneaker Bunko	Snk,Sks,Sst,Ssy,Snw,Ssw,Shh,Smi,Sls,Seo,Sky,Ssk,Ssh,Shg,Sfl,Smc,Smu,Sle,Srm
+Persona	P3, P4, PQ, P5
+Disgaea: Hour of Darkness	DG
+Fate	FS, FU, FH, FZ
+Shining Series	SE, SF, SR
+THE KING OF FIGHTERS	KF
+Sengoku BASARA	SB
+Idolm@ster	IM,IAS
+CANAAN	CN
+FAIRY TAIL	FT
+MELTY BLOOD / Kara no Kyoukai	MB, KK
+Detective Opera Milky Holmes	MK, MK2
+New Evangelion	EV
+Black Rock Shooter	BR
+Macross Frontier	MF
+Katanagatari	KG
+Monogatari Series	BM, NM, MG
+Guilty Crown	GC
+Accel World	AW
+Sword Art Online	SAO
+Hatsune Miku Project DIVA	PD
+Psycho-Pass	PP
+Gargantia on the Verdurous Planet	GG
+Devil Survivor 2	DS2
+Prisma Illya	PI
+Wooser's Hand-to-Mouth Life	Woo
+Kill La Kill	KLK
+Log Horizon	LH
+Kantai Collection ~KanColle~	KC
+Crayon Shin-Chan	CS
+Card Game Shiyoko	CGS
+Gigant Shooter Tsukasa	GST
+Terra Formars	TF
+Attack on Titan	AOT
+Schoolgirl Strikers	SGS
+Puyo Puyo	PY
+Osomatsu-san	OMS
+Rin-ne	KR
+Kiznaiver	KI
+Re:Zero	RZ	
+Chain Chronicle	CC
+Star Wars	SW
+Tengen Toppa Gurren Lagann	GL
+Fate/Apocrypha	APO
+Darling in the Franxx	FXX
+GODZILLA	GZL
+Sword Art Online Alternative: Gun Gale Online	GGO
+Revue Starlight	RSL
+No Game No Life	NGL
+Idolmaster Million Live!	IMS,IAS
+Steins;Gate	STG
+Overlord	OVL
+Goblin Slayer	GBS
