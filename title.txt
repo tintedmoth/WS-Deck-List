@@ -1,0 +1,106 @@
+Da Capo / Dal Segno	DC, DC3, DC4, DS
+Persona	P3, P4, PQ, P5
+Little Busters!	LB, KW, Mlb
+Disgaea: Hour of Darkness	DG
+Familiar of Zero	ZM
+Fate	FS, FU, FH, FZ
+Magical Girl Lyrical Nanoha	NS, N1, NV, NA, N2, NR, ND
+Shining Series	SE, SF, SR
+Lucky Star	LS
+THE KING OF FIGHTERS	KF
+CLANNAD	CL, Kcl
+Sengoku BASARA	SB
+The Girl Who Leapt Through Space / My-Hime & My-Otome	SK, MH
+Idolm@ster	IM, IAS
+Phantom -Requiem for the Phantom-	PT
+CANAAN	CN
+The Melancholy of Haruhi Suzumiya	SY, Ssy
+FAIRY TAIL	FT
+A Certain Magical Index / A Certain Scientific Railgun	ID, RG
+MELTY BLOOD / Kara no Kyoukai	MB, KK
+Angel Beats! / Kud Wafter	AB, KW, Kab
+Detective Opera Milky Holmes	MK, MK2
+Shakugan no Shana	SS
+New Evangelion	EV
+Rewrite	RW, Krw
+Black Rock Shooter	BR
+Robotics;Notes	RN
+Macross Frontier	MF
+Nichijou	NJ
+Katanagatari	KG
+Dog Days	DD
+Monogatari Series	BM, NM, MG
+Madoka Magica	MM, MR
+Guilty Crown	GC
+Symphogear	SG
+Accel World	AW
+Visual Arts	VA
+Sword Art Online	SAO
+Vividred Operation	VR
+Hatsune Miku Project DIVA	PD
+Love Live!	LL
+Psycho-Pass	PP
+Day Break Illusion	GT
+Gargantia on the Verdurous Planet	GG
+Nisekoi	NK
+Devil Survivor 2	DS2
+Girl Friend Beta	GF
+Prisma Illya	PI
+To Love-Ru	TL
+Wooser's Hand-to-Mouth Life	Woo
+Charlotte	CHA, Kch
+Kill La Kill	KLK
+Idolmaster Cinderella Girls	IMC
+Log Horizon	LH
+Is the Order a Rabbit??	GU
+Kantai Collection ~KanColle~	KC
+Love Live! Sunshine!	LSS
+Crayon Shin-Chan	CS
+Card Game Shiyoko	CGS
+Bang Dream!	BD
+Gigant Shooter Tsukasa	GST
+Kono Suba	KS, Sks
+Terra Formars	TF
+ViVid Strike!	VS
+Attack on Titan	AOT
+Kemono Friends	KMN
+Schoolgirl Strikers	SGS
+Hina Logi ~from Luck & Logic~	HLL
+Puyo Puyo	PY
+Saekano: How to Raise a Boring Girlfriend	SHS
+Osomatsu-san	OMS
+Summer Pockets	SMP
+Rin-ne	KR
+Yuuna and the Haunted Hot Springs	YYS
+Kiznaiver	KI
+Kadokawa Sneaker Bunko	Snk, Sks, Sst, Ssy, Snw, Ssw, Shh, Smi, Sls, Seo, Sky, Ssk, Ssh, Shg, Sfl, Smc, Smu, Sle, Srm
+Re:Zero	RZ
+Chain Chronicle	CC
+Star Wars	SW
+Tengen Toppa Gurren Lagann	GL
+Rascal Series	SBY
+Fate/Apocrypha	APO
+Fujimi Fantasia Bunko	Fab, Foy, Fii, Fks, Fkm, Fkz, Fsl, Fsi, F35, Fos, Fdl, Fdy, Ftr, Fdd, Fhc, Ffp, Fmr, Fra
+Darling in the Franxx	FXX
+GODZILLA	GZL
+Sword Art Online Alternative: Gun Gale Online	GGO
+Cardcaptor Sakura	CCS
+Revue Starlight	RSL
+Date A Live	DAL, Fdl
+No Game No Life	NGL
+Quintessential Quintuplets	5HY
+Idolmaster Million Live!	IMS, IAS
+Love Live Nijigasaki	LNJ
+Steins;Gate	STG
+Overlord	OVL
+Goblin Slayer	GBS
+Jojo	JJ
+That Time I Got Reincarnated as a Slime	TSK
+Batman Ninja	BNJ
+Fate Grand/Order	FGO
+Grisaia	GRI
+Assault Lily	ALL
+Sakura Wars	SKR
+Lost Decade	LOD
+Bofuri - Max Defense	BFR
+Kaguya-sama Love is War	KGL
