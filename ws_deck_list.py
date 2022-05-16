@@ -74,7 +74,7 @@ class Sheet:
 	fontsize = 11
 	regsheet = ["ws-registration-consent-2018_ver.pdf", "ws-registration-consent-2018_v1.pdf", "Deck-Registration-WS-w-consent-2018v2.pdf"]
 	oldregsheet = "Deck-Registration-WS-w-consent-2.pdf"
-	data_name = "cdata.db"
+	data_name = "data.db"
 	title_name = "title.txt"
 	reg_name = "ws-registration-consent-2018_ver.pdf"
 	pdf_name = ""
@@ -104,13 +104,13 @@ class Sheet:
 	card_error = []
 	card_error_qty = []
 	zodiac = ("Ari", "Gem", "Leo", "Sgr", "Tau", "Vir", "Ang", "Bra", "Cob", "Hot", "Mid", "Rac")
-	end_rariry = ("SSP", "JSP", "PPR", "SR", "RRR", "XR", "SWR", "SP", "μR", "SBR", "FBR", "BNP", "SEC")
+	end_rariry = ("SSP", "JSP", "PPR", "SR", "RRR", "XR", "SWR", "SP", "μR", "SBR", "FBR", "BNP", "SEC", "OFR")
 	ssp = ("SSP", "JSP", "PPR")
 	special = ("S", "R", "X", "P", "J")
 	sp_pr = ("SP", "PR", "μR")
 	te_pe = ("TE", "PE")
 	t_p = ("T", "P")
-	jplayable = ("55", "56", "57", "58", "59", "60")
+	jplayable = ("55", "56", "57", "58", "59", "60","P02")
 	variant = "abcdefghi"
 	n = 0
 	other = ["E", "y", "y", "y", "y"]
@@ -160,7 +160,10 @@ class Sheet:
 					txt.close()
 		else:
 			with open(f"{res_dir}/{self.data_name}", "r", encoding="utf8") as read_file:
-				self.cdata = self.json_unzip(json.load(read_file))
+				if self.data_name.startswith("c"):
+					self.cdata = self.json_unzip(json.load(read_file))
+				else:
+					self.cdata = json.load(read_file)
 
 		self.tdata = {}
 		if os.path.exists(f"{res_dir}/{self.title_name}"):
@@ -558,7 +561,6 @@ class Sheet:
 				self.n += 1
 			elif not line.lower() == "":
 				var = line.split()
-				print(var)
 				if len(var)>2:
 					if any(st in var[0] for st in self.set_id) and "-" in var[0]:
 						try:
@@ -1176,26 +1178,55 @@ class Sheet:
 
 		for card in self.deck_list_edited:
 			card_down = card.lower().replace("/", "_").replace("-", "_")
-			if os.path.exists(f"{pdir}{card_down}{imgtype}"):
+			print(card_down)
+			if os.path.exists(f"{pdir}{card_down}.png") or os.path.exists(f"{pdir}{card_down}.gif"):
 				continue
 			else:
 				try:
-					urllib.request.urlretrieve(url + card.lower().replace("/", "-") + imgtype, pdir + card_down + imgtype)
-					temp = pImage.open(pdir + card.lower().replace("/", "_").replace("-", "_") + imgtype)
+					print(url + card.lower().replace("/", "-") + imgtype)
+					urllib.request.urlretrieve(url + card.upper().replace("/", "-") + imgtype, pdir + card_down + imgtype)
+					temp = pImage.open(pdir + card_down + imgtype)
 					temp.close()
 					self.cdata[card]["img"] = card_down + imgtype
 				except IOError:
-					os.remove(pdir + card.lower().replace("/", "_").replace("-", "_") + imgtype)
-					imgtype = ".png"
 					try:
+						print(url + card.lower().replace("/", "-") + imgtype)
 						urllib.request.urlretrieve(url + card.lower().replace("/", "-") + imgtype, pdir + card_down + imgtype)
 						temp = pImage.open(pdir + card.lower().replace("/", "_").replace("-", "_") + imgtype)
 						temp.close()
 						self.cdata[card]["img"] = card_down + imgtype
 					except IOError:
 						os.remove(pdir + card.lower().replace("/", "_").replace("-", "_") + imgtype)
-						print(f"Could not download {card} image")
-						self.cdata[card]["img"] = "blank.png"
+						imgtype = ".png"
+						try:
+							# print(url + card.lower().replace("/", "-") + imgtype)
+							urllib.request.urlretrieve(url + card.lower().replace("/", "-") + imgtype, pdir + card_down + imgtype)
+							temp = pImage.open(pdir + card_down + imgtype)
+							temp.close()
+							self.cdata[card]["img"] = card_down + imgtype
+						except IOError:
+							try:
+								# print(url + self.cdata[card]["img"].lower())
+								urllib.request.urlretrieve(url + self.cdata[card]["img"].lower().replace("_","-"), pdir + card_down + imgtype)
+								temp = pImage.open(pdir + card_down + imgtype)
+								temp.close()
+								self.cdata[card]["img"] = card_down + imgtype
+							except IOError:
+								try:
+									if "SR" in self.cdata[card]["rarity"] or "RRR" in self.cdata[card]["rarity"]:
+										ims = card[:-1]
+									else:
+										ims = card
+									ims = f"{ims.lower().replace('/','-')}{self.cdata[card]['rarity'].lower()}{imgtype}"
+									# print(url + ims)
+									urllib.request.urlretrieve(url + ims, pdir + card_down + imgtype)
+									temp = pImage.open(pdir + card_down + imgtype)
+									temp.close()
+									self.cdata[card]["img"] = card_down + imgtype
+								except IOError:
+									os.remove(pdir + card.lower().replace("/", "_").replace("-", "_") + imgtype)
+									print(f"Could not download {card} image")
+									self.cdata[card]["img"] = "blank.png"
 
 			if "J" in card.split("-")[0] and "P" not in card.split("-")[1] and not any(num in card for num in self.jplayable) and not "J/" in card:
 				card0 = card + "J"
@@ -1210,8 +1241,7 @@ class Sheet:
 					img.rotate(-90, expand=True).save(pdir + card_down + imgtype)
 				except FileNotFoundError:
 					pass
-		else:
-			self.translation_pdf(pdir)
+		self.translation_pdf(pdir)
 
 	def translation_pdf(self, pdir):
 		def bunko(ind):
@@ -1262,7 +1292,7 @@ class Sheet:
 					card0 = card + "P"
 				else:
 					card0 = card
-
+			print(card0)
 			row = 1
 
 			if c % 11 == 0:
@@ -1270,12 +1300,19 @@ class Sheet:
 				c = 1
 
 			try:
+				# if "P4/S08-096" in card:
+				# 	self.cdata[card]["img"] = "p4_s08_096.gif"
+				# if "P3/S01-057" in card:
+				# 	self.cdata[card]["img"] = "p3_s01_057.gif"
 				pic = Image(pdir + self.cdata[card]["img"])
+				print(pdir + self.cdata[card]["img"])
 			except FileNotFoundError:
 				pic = Image(base64.b64decode(self.blank))
+				print("2")
 			pic.drawHeight = 120  # 126
 			pic.drawWidth = 87  # 90
 			trigger = ""
+
 			for tt in sorted(self.cdata[card0]["trigger"], reverse=True):
 				if tt == "":
 					continue
@@ -1367,16 +1404,9 @@ class Sheet:
 											else:
 												text0 += ss1 + cdata[card0]["trait"][tr]
 									else:
-										print(card0)
-										if "BFR/S78-046" in card:
-											print(cdata[card]["trait"])
-											text0 = text0 + ss2
-											for tr in range(len(cdata[card0]["trait"])):
-												text0 += cdata[card0]["trait"][tr]
-										else:
-											text0 = text0 + ss2
-											for tr in range(len(cdata[card0]["trait"])):
-												text0 += cdata[card0]["trait"][tr]
+										text0 = text0 + ss2
+										for tr in range(len(cdata[card0]["trait"])):
+											text0 += cdata[card0]["trait"][tr]
 
 						return text0
 
@@ -1405,7 +1435,6 @@ class Sheet:
 					text3 = ""
 
 			text4 = ""
-
 			for text in self.cdata[card0]["text"]:
 				def replace_text(sl, nr, n=False):
 					text = sl
